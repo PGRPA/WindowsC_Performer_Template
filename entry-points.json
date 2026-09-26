@@ -1,0 +1,22 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "0a29d4e8-fa74-41d8-a9e6-8f44b36d70d3",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "in_EnvironmentProd": {
+            "type": "boolean",
+            "description": "Optional: If set to true, the process will use Config file path from Orchestrator asset, otherwise from Data folder.",
+            "x-default-expression": "False",
+            "default": false
+          }
+        },
+        "required": []
+      }
+    }
+  ]
+}
