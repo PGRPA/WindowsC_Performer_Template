@@ -1,7 +1,7 @@
 {
   "name": "WindowsC_Performer_Template",
   "projectId": "39ebe087-0935-4df3-a6ff-622d9c4458cc",
-  "description": "Process description.",
+  "description": "UiPath performer template for Windows C# projects",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Database.Activities": "[2.0.0]",
