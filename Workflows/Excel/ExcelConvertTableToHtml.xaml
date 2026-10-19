@@ -97,7 +97,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Convert dataTable into Html string table." DisplayName="ExcelConvertTableToHtml" sap:VirtualizedContainerService.HintSize="508.4,1268" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Convert dataTable into Html string table." DisplayName="ExcelConvertTableToHtml" sap:VirtualizedContainerService.HintSize="664.4000000000001,1988" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(sd:DataColumn)" Name="listDataColumn" />
     </Sequence.Variables>
@@ -107,14 +107,14 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - 79" sap:VirtualizedContainerService.HintSize="477.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
+    <ui:LogMessage DisplayName="Log Message - 79" sap:VirtualizedContainerService.HintSize="548.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">"Start - Excel Convert Table To Html"</CSharpValue>
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <ui:MultipleAssign DisplayName="Multiple Assign - Outputs" sap:VirtualizedContainerService.HintSize="477.6,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="Multiple Assign - Outputs" sap:VirtualizedContainerService.HintSize="548.8,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -144,7 +144,7 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <If DisplayName="If - dtExcelTable == null" sap:VirtualizedContainerService.HintSize="477.6,56.8" sap2010:WorkflowViewState.IdRef="If_1">
+    <If DisplayName="If - dtExcelTable == null" sap:VirtualizedContainerService.HintSize="548.8,56.8" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Condition>
         <InArgument x:TypeArguments="x:Boolean">
           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">dtExcelTable == null</CSharpValue>
@@ -183,7 +183,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <Assign DisplayName="Assign - listDataColumn" sap:VirtualizedContainerService.HintSize="477.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign DisplayName="Assign - listDataColumn" sap:VirtualizedContainerService.HintSize="548.8,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="scg:List(sd:DataColumn)">
           <CSharpReference x:TypeArguments="scg:List(sd:DataColumn)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">listDataColumn</CSharpReference>
@@ -195,7 +195,7 @@
         </InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEach x:TypeArguments="sd:DataColumn" CurrentIndex="{x:Null}" DisplayName="For Each currentDataColumn - listDataColumn" sap:VirtualizedContainerService.HintSize="477.6,56.8" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
+    <ui:ForEach x:TypeArguments="sd:DataColumn" CurrentIndex="{x:Null}" DisplayName="For Each currentDataColumn - listDataColumn" sap:VirtualizedContainerService.HintSize="548.8,776.8" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="sd:DataColumn">
           <ActivityAction.Argument>
@@ -240,8 +240,8 @@
                           </ui:AssignOperation.To>
                           <ui:AssignOperation.Value>
                             <InArgument x:TypeArguments="x:String">
-                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31" xml:space="preserve">dictColNo_Width.ContainsKey((currentDataColumn.Ordinal + 1)) ? 
-"&lt;th style=\"width: " + dictColNo_Width[(currentDataColumn.Ordinal + 1)].ToString() + "%;\"&gt;" : 
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_33" xml:space="preserve">dictColNo_Width.ContainsKey((currentDataColumn.Ordinal + 1)) ? 
+"&lt;th style=\"width: " + dictColNo_Width[(currentDataColumn.Ordinal + 1)].ToString() + "px;\"&gt;" : 
 "&lt;th&gt;"</CSharpValue>
                             </InArgument>
                           </ui:AssignOperation.Value>
@@ -295,12 +295,12 @@
       </ui:ForEach.Values>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table - dtExcelTable" sap:VirtualizedContainerService.HintSize="477.6,56.8" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table - dtExcelTable" sap:VirtualizedContainerService.HintSize="548.8,56.8" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
@@ -411,7 +411,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <Assign DisplayName="Assign - strHtmlTableContent - Empty" sap:VirtualizedContainerService.HintSize="477.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_6">
+    <Assign DisplayName="Assign - strHtmlTableContent - Empty" sap:VirtualizedContainerService.HintSize="548.8,174.4" sap2010:WorkflowViewState.IdRef="Assign_6">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">
           <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_17">strHtmlTableContent</CSharpReference>
@@ -423,14 +423,14 @@
         </InArgument>
       </Assign.Value>
     </Assign>
-    <ui:LogMessage DisplayName="Log Message - 81" sap:VirtualizedContainerService.HintSize="477.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace">
+    <ui:LogMessage DisplayName="Log Message - 81" sap:VirtualizedContainerService.HintSize="548.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">"Table header: " + strHtmlTableHeader + Environment.NewLine + "Table content: " + strHtmlTableContent</CSharpValue>
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <ui:LogMessage DisplayName="Log Message - 82" sap:VirtualizedContainerService.HintSize="477.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace">
+    <ui:LogMessage DisplayName="Log Message - 82" sap:VirtualizedContainerService.HintSize="548.8,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">"Stop - Excel Convert Table To Html"</CSharpValue>
