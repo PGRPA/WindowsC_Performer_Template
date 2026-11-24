@@ -123,45 +123,46 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Read Excel table, check if all required columns were provided, validate empty status column if required." DisplayName="ExcelGetTable" sap:VirtualizedContainerService.HintSize="615.6,2442.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Read Excel table, check if all required columns were provided, validate empty status column if required." DisplayName="ExcelGetTable" sap:VirtualizedContainerService.HintSize="710,832.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - 83" sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
+    <ui:LogMessage DisplayName="Log Message - 84" sap:VirtualizedContainerService.HintSize="649.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_74">"Start - Excel Get Table"</CSharpValue>
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <TryCatch sap2010:Annotation.AnnotationText="Try to read Excel input file." DisplayName="Try Catch - Retry Scope - Excel Application Scope" sap:VirtualizedContainerService.HintSize="486.4,848.8" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+    <TryCatch sap2010:Annotation.AnnotationText="Try to read Excel input file." DisplayName="Try Catch - Retry Scope - Excel Application Scope" sap:VirtualizedContainerService.HintSize="649.6,88" sap2010:WorkflowViewState.IdRef="TryCatch_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" DisplayName="Retry Scope - Excel Application Scope - dtExcelInputCases" sap:VirtualizedContainerService.HintSize="468.8,498.4" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+        <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" DisplayName="Retry Scope - Excel Application Scope - dtExcelOutput" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="RetryScope_1">
           <ui:RetryScope.ActivityBody>
             <ActivityAction>
-              <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="467.2,324" sap2010:WorkflowViewState.IdRef="Sequence_26">
+              <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="467.2,284" sap2010:WorkflowViewState.IdRef="Sequence_26">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:ExcelApplicationScope sap2010:Annotation.AnnotationText="Get input table for process." AutoSave="False" CreateNewFile="False" DisplayName="Excel Application Scope - dtExcelInputCases" sap:VirtualizedContainerService.HintSize="433.6,264" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" ReadOnly="True" Visible="False">
+                <ui:ExcelApplicationScope sap2010:Annotation.AnnotationText="Get input table for process." AutoSave="False" CreateNewFile="False" DisplayName="Excel Application Scope - dtExcelOutput" sap:VirtualizedContainerService.HintSize="433.6,224" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" ReadOnly="True" Visible="False">
                   <ui:ExcelApplicationScope.Body>
                     <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                       </ActivityAction.Argument>
-                      <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range - dtExcelInputCases" sap:VirtualizedContainerService.HintSize="400,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2">
+                      <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range - dtExcelOutput" sap:VirtualizedContainerService.HintSize="400,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2">
                         <ui:ExcelReadRange.DataTable>
                           <OutArgument x:TypeArguments="sd:DataTable">
                             <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_15">dtExcelOutput</CSharpReference>
@@ -211,7 +212,7 @@
           </ui:RetryScope.RetryInterval>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -229,7 +230,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Throw DisplayName="Throw - Error Reading Excel Input" sap:VirtualizedContainerService.HintSize="468.8,90.4" sap2010:WorkflowViewState.IdRef="Throw_6">
+            <Throw DisplayName="Throw - Error Reading Excel Input" sap:VirtualizedContainerService.HintSize="449.6,90.4" sap2010:WorkflowViewState.IdRef="Throw_6">
               <InArgument x:TypeArguments="s:Exception">
                 <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_67">new BusinessRuleException(string.Format("Robot couldn't open Excel file: {0}, sheet: {1}.", strInputExcelPath, strInputExcelSheetName), exception)</CSharpValue>
               </InArgument>
@@ -238,7 +239,7 @@
         </Catch>
       </TryCatch.Catches>
       <TryCatch.Finally>
-        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="468.8,24.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
+        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -248,14 +249,14 @@
         </Sequence>
       </TryCatch.Finally>
     </TryCatch>
-    <ui:LogMessage DisplayName="Log Message - 84" sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info">
+    <ui:LogMessage DisplayName="Log Message - 85" sap:VirtualizedContainerService.HintSize="649.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_79" xml:space="preserve">"File: " + System.IO.Path.GetFileName(strInputExcelPath) + ", Sheet: " + strInputExcelSheetName +  ", has: " + dtExcelOutput.Rows.Count.ToString() + " rows(s)"</CSharpValue>
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <Sequence sap2010:Annotation.AnnotationText="Validate provided Excel input dataTable." DisplayName="Validate Input Data" sap:VirtualizedContainerService.HintSize="486.4,88" sap2010:WorkflowViewState.IdRef="Sequence_14">
+    <Sequence sap2010:Annotation.AnnotationText="Validate provided Excel input dataTable." DisplayName="Validate Input Data" sap:VirtualizedContainerService.HintSize="649.6,88" sap2010:WorkflowViewState.IdRef="Sequence_14">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -284,7 +285,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message - 85" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Trace">
+            <ui:LogMessage DisplayName="Log Message - 86" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Trace">
               <ui:LogMessage.Message>
                 <InArgument x:TypeArguments="x:Object">
                   <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_49">"No column validation provided"</CSharpValue>
@@ -399,7 +400,7 @@
         </If.Else>
       </If>
     </Sequence>
-    <If sap2010:Annotation.AnnotationText="Excel input dataTable exists and have any rows." DisplayName="If - dtExcelInputCases != null" sap:VirtualizedContainerService.HintSize="486.4,923.2" sap2010:WorkflowViewState.IdRef="If_5">
+    <If sap2010:Annotation.AnnotationText="Excel input dataTable exists and have any rows." DisplayName="If - dtExcelInputCases != null" sap:VirtualizedContainerService.HintSize="649.6,88" sap2010:WorkflowViewState.IdRef="If_5">
       <If.Condition>
         <InArgument x:TypeArguments="x:Boolean">
           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">dtExcelOutput != null &amp;&amp; dtExcelOutput.Rows.Count &gt; 0</CSharpValue>
@@ -408,19 +409,19 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="484.8,728.8" sap2010:WorkflowViewState.IdRef="Sequence_16">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="484.8,760.8" sap2010:WorkflowViewState.IdRef="Sequence_16">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If sap2010:Annotation.AnnotationText="Status column name to check provided and argument true." DisplayName="If - Status Column Name Provided" sap:VirtualizedContainerService.HintSize="451.2,668.8" sap2010:WorkflowViewState.IdRef="If_7">
+          <If sap2010:Annotation.AnnotationText="Status column name to check provided and argument true." DisplayName="If - Status Column Name Provided" sap:VirtualizedContainerService.HintSize="451.2,700.8" sap2010:WorkflowViewState.IdRef="If_7">
             <If.Condition>
               <InArgument x:TypeArguments="x:Boolean">
                 <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_54">!boolValidateEmptyStatus || string.IsNullOrEmpty(strStatusColumnName)</CSharpValue>
@@ -441,7 +442,7 @@
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message - 86" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Trace">
+                <ui:LogMessage DisplayName="Log Message - 87" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Trace">
                   <ui:LogMessage.Message>
                     <InArgument x:TypeArguments="x:Object">
                       <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_55">(boolValidateEmptyStatus ? "No Status column name to check provided" : "Status validation off")</CSharpValue>
@@ -492,7 +493,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="Log Message - 87" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Info">
+                      <ui:LogMessage DisplayName="Log Message - 88" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Info">
                         <ui:LogMessage.Message>
                           <InArgument x:TypeArguments="x:Object">
                             <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_85">"Table contains empty fields [" + strStatusColumnName + "='']: " + dtExcelOutput.AsEnumerable().Where(x =&gt; string.IsNullOrEmpty(x[strStatusColumnName].ToString())).CopyToDataTable().Rows.Count.ToString()</CSharpValue>
@@ -508,7 +509,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="Log Message - 88" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="Info">
+                      <ui:LogMessage DisplayName="Log Message - 89" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="Info">
                         <ui:LogMessage.Message>
                           <InArgument x:TypeArguments="x:Object">
                             <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_82">"Table contains no empty fields [" + strStatusColumnName + "='']"</CSharpValue>
@@ -554,7 +555,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:LogMessage DisplayName="Log Message - 89" sap:VirtualizedContainerService.HintSize="486.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace">
+    <ui:LogMessage DisplayName="Log Message - 90" sap:VirtualizedContainerService.HintSize="649.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_75">"Stop - Excel Get Table"</CSharpValue>

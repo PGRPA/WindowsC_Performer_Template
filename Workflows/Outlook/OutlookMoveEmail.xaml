@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="OutlookMoveEmail" this:OutlookMoveEmail.intSMTP_1_Exchange_2_Outlook_3="2" this:OutlookMoveEmail.strEmailFolderFrom="inbox" this:OutlookMoveEmail.strEmailFolderTo="inbox" this:OutlookMoveEmail.intGetEmailsTop="50" this:OutlookMoveEmail.boolGetEmailsUnread="True" this:OutlookMoveEmail.boolGetEmailsMarkRead="False" this:OutlookMoveEmail.strEmailCredName_12="Robot1_OutlookCredencials" this:OutlookMoveEmail.intEmailPort_1="587" this:OutlookMoveEmail.strEmailDomain_2="domain_name" this:OutlookMoveEmail.strEmailServer_12="https://outlook.domain_name.pl/EWS/Exchange.asmx" this:OutlookMoveEmail.intGetCredTOms="8000" this:OutlookMoveEmail.intGetMailsTOms="16000" this:OutlookMoveEmail.intMoveMailsTOms="16000" this:OutlookMoveEmail.intGetMailsRSNR="2" this:OutlookMoveEmail.tsGetMailsRSTS="00:00:06" this:OutlookMoveEmail.tsDelAfterMove="00:00:03" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umae="clr-namespace:UiPath.Mail.Activities.Enums;assembly=UiPath.Mail.Activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="OutlookMoveEmail" this:OutlookMoveEmail.intSMTP_1_Exchange_2_Outlook_3="2" this:OutlookMoveEmail.strEmailFolderFrom="inbox" this:OutlookMoveEmail.strEmailFolderTo="inbox" this:OutlookMoveEmail.intGetEmailsTop="50" this:OutlookMoveEmail.boolGetEmailsUnread="True" this:OutlookMoveEmail.boolGetEmailsMarkRead="False" this:OutlookMoveEmail.strEmailCredName_12="Robot1_OutlookCredentials" this:OutlookMoveEmail.intEmailPort_1="587" this:OutlookMoveEmail.strEmailDomain_2="domain_name" this:OutlookMoveEmail.strEmailServer_12="https://outlook.domain_name.pl/EWS/Exchange.asmx" this:OutlookMoveEmail.intGetCredTOms="8000" this:OutlookMoveEmail.intGetMailsTOms="16000" this:OutlookMoveEmail.intMoveMailsTOms="16000" this:OutlookMoveEmail.intGetMailsRSNR="2" this:OutlookMoveEmail.tsGetMailsRSTS="00:00:06" this:OutlookMoveEmail.tsDelAfterMove="00:00:03" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umae="clr-namespace:UiPath.Mail.Activities.Enums;assembly=UiPath.Mail.Activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="intSMTP_1_Exchange_2_Outlook_3" Type="InArgument(x:Int32)" />
     <x:Property Name="strEmailFolderFrom" Type="InArgument(x:String)" />
@@ -139,7 +139,7 @@
       <AssemblyReference>NPOI.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Move processed E-mail to proper Outlook folder." DisplayName="OutlookMoveEmail" sap:VirtualizedContainerService.HintSize="895,1153" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Move processed E-mail to proper Outlook folder." DisplayName="OutlookMoveEmail" sap:VirtualizedContainerService.HintSize="1096,1871" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strLogin" />
       <Variable x:TypeArguments="ss:SecureString" Name="sstrPass" />
@@ -151,14 +151,14 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - 93" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
+    <ui:LogMessage DisplayName="Log Message - 94" sap:VirtualizedContainerService.HintSize="454,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">"Start - Outlook Move Email"</CSharpValue>
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <If sap2010:Annotation.AnnotationText="Read E-mail credentials?" DisplayName="If - strEmailCredName_12 != &quot;&quot;" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="If_29">
+    <If sap2010:Annotation.AnnotationText="Read E-mail credentials?" DisplayName="If - strEmailCredName_12 != &quot;&quot;" sap:VirtualizedContainerService.HintSize="454,651" sap2010:WorkflowViewState.IdRef="If_29">
       <If.Condition>
         <InArgument x:TypeArguments="x:Boolean">
           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_302">strEmailCredName_12 != ""</CSharpValue>
@@ -166,13 +166,13 @@
       </If.Condition>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" DisplayName="Retry Scope - Get Credential - strEmailCredName_12" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="RetryScope_6">
+        <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" DisplayName="Retry Scope - Get Credential - strEmailCredName_12" sap:VirtualizedContainerService.HintSize="452,402" sap2010:WorkflowViewState.IdRef="RetryScope_6">
           <ui:RetryScope.ActivityBody>
             <ActivityAction>
               <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="450,227" sap2010:WorkflowViewState.IdRef="Sequence_79">
@@ -226,23 +226,24 @@
           </ui:RetryScope.RetryInterval>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:RetryScope>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_42">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="452,25" sap2010:WorkflowViewState.IdRef="Sequence_42">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </Sequence>
       </If.Else>
     </If>
-    <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" sap2010:Annotation.AnnotationText="Try to get E-mails from given folder." DisplayName="Retry Scope - Switch - intSMTP_1_Exchange_2_Outlook_3 - Get" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="RetryScope_4">
+    <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" sap2010:Annotation.AnnotationText="Try to get E-mails from given folder." DisplayName="Retry Scope - Switch - intSMTP_1_Exchange_2_Outlook_3 - Get" sap:VirtualizedContainerService.HintSize="454,88" sap2010:WorkflowViewState.IdRef="RetryScope_4">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
           <Switch x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="Choose which method to use." DisplayName="Switch - intSMTP_1_Exchange_2_Outlook_3 - Get" sap:VirtualizedContainerService.HintSize="420,597.6" sap2010:WorkflowViewState.IdRef="Switch`1_3">
@@ -1785,7 +1786,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:RetryScope>
-    <ui:LogMessage DisplayName="Log Message - 94" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info">
+    <ui:LogMessage DisplayName="Log Message - 95" sap:VirtualizedContainerService.HintSize="454,175" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_503" xml:space="preserve">"Using method: " + (intSMTP_1_Exchange_2_Outlook_3 == 1 ? "SMTP" : intSMTP_1_Exchange_2_Outlook_3 == 2 ? "Exchange" : "Outlook Application") + 
@@ -1802,7 +1803,7 @@
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <If sap2010:Annotation.AnnotationText="Found nothing or 0 E-mails with given ID?" DisplayName="If - Nothing Found" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="If_30">
+    <If sap2010:Annotation.AnnotationText="Found nothing or 0 E-mails with given ID?" DisplayName="If - Nothing Found" sap:VirtualizedContainerService.HintSize="454,88" sap2010:WorkflowViewState.IdRef="If_30">
       <If.Condition>
         <InArgument x:TypeArguments="x:Boolean">
           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_472">listEmailsFound == null || listEmailsFound.Count() == 0</CSharpValue>
@@ -1840,7 +1841,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <If sap2010:Annotation.AnnotationText="Found more than 1 E-mail with given ID?" DisplayName="If - Found More Than 1 E-mail" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="If_31">
+    <If sap2010:Annotation.AnnotationText="Found more than 1 E-mail with given ID?" DisplayName="If - Found More Than 1 E-mail" sap:VirtualizedContainerService.HintSize="454,88" sap2010:WorkflowViewState.IdRef="If_31">
       <If.Condition>
         <InArgument x:TypeArguments="x:Boolean">
           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_474">listEmailsFound.Count() &gt; 1</CSharpValue>
@@ -1878,10 +1879,10 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" sap2010:Annotation.AnnotationText="Try to move E-mails to given folder." DisplayName="Retry Scope - Switch - intSMTP_1_Exchange_2_Outlook_3 - Move" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="RetryScope_5">
+    <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" sap2010:Annotation.AnnotationText="Try to move E-mails to given folder." DisplayName="Retry Scope - Switch - intSMTP_1_Exchange_2_Outlook_3 - Move" sap:VirtualizedContainerService.HintSize="454,88" sap2010:WorkflowViewState.IdRef="RetryScope_5">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
-          <Switch x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="Choose which method to use." DisplayName="Switch - intSMTP_1_Exchange_2_Outlook_3 - Move" sap:VirtualizedContainerService.HintSize="400,908.8" sap2010:WorkflowViewState.IdRef="Switch`1_4">
+          <Switch x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="Choose which method to use." DisplayName="Switch - intSMTP_1_Exchange_2_Outlook_3 - Move" sap:VirtualizedContainerService.HintSize="399,909" sap2010:WorkflowViewState.IdRef="Switch`1_4">
             <Switch.Default>
               <Throw DisplayName="Throw - Invalid Option - Move" sap:VirtualizedContainerService.HintSize="337.6,90.4" sap2010:WorkflowViewState.IdRef="Throw_10">
                 <InArgument x:TypeArguments="s:Exception">
@@ -1901,7 +1902,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MoveIMAPMailMessageToFolder ClientName="{x:Null}" ClientVersion="{x:Null}" Password="{x:Null}" UseOAuth="{x:Null}" x:Key="1" ConnectionMode="LegacyConfiguration" CreatedAfterSolutionSupport="False" DisplayName="MoveIMAPMailMessageToFolder - strEmailFolderTo" EnableSSL="True" sap:VirtualizedContainerService.HintSize="337.6,194.4" sap2010:WorkflowViewState.IdRef="MoveIMAPMailMessageToFolder_2" IgnoreCRL="False" SecureConnection="Auto" UseISConnection="False">
+            <ui:MoveIMAPMailMessageToFolder ClientName="{x:Null}" ClientVersion="{x:Null}" Password="{x:Null}" UseOAuth="{x:Null}" x:Key="1" ConnectionMode="LegacyConfiguration" CreatedAfterSolutionSupport="False" DisplayName="MoveIMAPMailMessageToFolder - strEmailFolderTo" EnableSSL="True" sap:VirtualizedContainerService.HintSize="338,195" sap2010:WorkflowViewState.IdRef="MoveIMAPMailMessageToFolder_2" IgnoreCRL="False" SecureConnection="Auto" UseISConnection="False">
               <ui:MoveIMAPMailMessageToFolder.ConnectionDetailsBackupSlot>
                 <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="LegacyConfiguration">
                   <usau:BackupSlot.BackupValues>
@@ -1945,7 +1946,7 @@
                 </InArgument>
               </ui:MoveIMAPMailMessageToFolder.Server>
             </ui:MoveIMAPMailMessageToFolder>
-            <ui:MoveMessageToFolder ApplicationId="{x:Null}" DirectoryId="{x:Null}" EmailAutodiscover="{x:Null}" Password="{x:Null}" SharedMailbox="{x:Null}" x:Key="2" AuthenticationMode="UserNameAndPassword" DisplayName="MoveMessageToFolder - strEmailFolderTo" ExchangeVersion="Exchange2010_SP1" sap:VirtualizedContainerService.HintSize="337.6,142.4" sap2010:WorkflowViewState.IdRef="MoveMessageToFolder_3">
+            <ui:MoveMessageToFolder ApplicationId="{x:Null}" DirectoryId="{x:Null}" EmailAutodiscover="{x:Null}" Password="{x:Null}" SharedMailbox="{x:Null}" x:Key="2" AuthenticationMode="UserNameAndPassword" DisplayName="MoveMessageToFolder - strEmailFolderTo" ExchangeVersion="Exchange2010_SP1" sap:VirtualizedContainerService.HintSize="338,143" sap2010:WorkflowViewState.IdRef="MoveMessageToFolder_3">
               <ui:MoveMessageToFolder.Domain>
                 <InArgument x:TypeArguments="x:String">
                   <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_489">strEmailDomain_2</CSharpValue>
@@ -1982,7 +1983,7 @@
                 </InArgument>
               </ui:MoveMessageToFolder.User>
             </ui:MoveMessageToFolder>
-            <ui:MoveOutlookMessage x:Key="3" DisplayName="MoveOutlookMessage - strEmailFolderTo" sap:VirtualizedContainerService.HintSize="337.6,142.4" sap2010:WorkflowViewState.IdRef="MoveOutlookMessage_2">
+            <ui:MoveOutlookMessage x:Key="3" DisplayName="MoveOutlookMessage - strEmailFolderTo" sap:VirtualizedContainerService.HintSize="338,143" sap2010:WorkflowViewState.IdRef="MoveOutlookMessage_2">
               <ui:MoveOutlookMessage.Account>
                 <InArgument x:TypeArguments="x:String">
                   <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_492">strEmailAccount_13</CSharpValue>
@@ -2023,19 +2024,19 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:RetryScope>
-    <Delay DisplayName="Delay - tsDelAfterMove" sap:VirtualizedContainerService.HintSize="450,123" sap2010:WorkflowViewState.IdRef="Delay_2">
+    <Delay DisplayName="Delay - tsDelAfterMove" sap:VirtualizedContainerService.HintSize="454,123" sap2010:WorkflowViewState.IdRef="Delay_2">
       <InArgument x:TypeArguments="x:TimeSpan">
         <CSharpValue x:TypeArguments="x:TimeSpan" sap2010:WorkflowViewState.IdRef="CSharpValue`1_497">tsDelAfterMove</CSharpValue>
       </InArgument>
     </Delay>
-    <ui:LogMessage DisplayName="Log Message - 95" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info">
+    <ui:LogMessage DisplayName="Log Message - 96" sap:VirtualizedContainerService.HintSize="454,175" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_498">"E-mail moved from: " + strEmailFolderFrom + ", to: " + strEmailFolderTo</CSharpValue>
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <ui:LogMessage DisplayName="Log Message - 96" sap:VirtualizedContainerService.HintSize="450,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace">
+    <ui:LogMessage DisplayName="Log Message - 97" sap:VirtualizedContainerService.HintSize="454,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">"Stop - Outlook Move Email"</CSharpValue>
